@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Notes</string>
+    <string name="hello">Hola!</string>
+    <string name="sign_up">Sign up</string>
+    <string name="please">Please create account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password_confirm">Confirm password</string>
+    <string name="already">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome back</string>
+    <string name="sign_in">Sign in</string>
+    <string name="dont">Don\'t have an account?</string>
+    <string name="create">Create account</string>
+    <string name="add">Add new note</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="success">Successfully</string>
+    <string name="notes">Notes</string>
+    <string name="note_title">Note title</string>
+    <string name="note_content">This can be note contentthat can be long</string>
+    <string name="note_timestamp">22/02/2023</string>
+</resources>
