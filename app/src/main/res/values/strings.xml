@@ -20,4 +20,5 @@
     <string name="note_title">Note title</string>
     <string name="note_content">This can be note contentthat can be long</string>
     <string name="note_timestamp">22/02/2023</string>
+    <string name="delete">Delete note</string>
 </resources>

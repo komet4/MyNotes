@@ -3,12 +3,14 @@ package com.topacademy.mynotes;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.Query;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +35,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void showMenu() {
-        //TODO Display menu
+        PopupMenu popupMenu = new PopupMenu(MainActivity.this, menuButton);
+        popupMenu.getMenu().add("Sign out");
+        popupMenu.show();
+        popupMenu.setOnMenuItemClickListener(menuItem -> {
+            if (menuItem.getTitle() == "Sign out") {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                finish();
+                return true;
+            }
+            return false;
+        });
     }
 
     void setupRecyclerView() {

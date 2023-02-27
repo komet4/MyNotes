@@ -14,7 +14,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     EditText emailEditText, passwordEditText, confirmPasswordEditText;
     Button createAccountButton;
     ProgressBar progressBar;
-    TextView loginButtonTextView;
+    TextView loginTextViewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class CreateAccountActivity extends AppCompatActivity {
         confirmPasswordEditText = findViewById(R.id.confirm_password_edit_text);
         createAccountButton = findViewById(R.id.create_account_button);
         progressBar = findViewById(R.id.progress_bar);
-        loginButtonTextView = findViewById(R.id.login_btn_text_view);
+        loginTextViewButton = findViewById(R.id.login_text_view_button);
 
         createAccountButton.setOnClickListener(v -> createUser());
-        loginButtonTextView.setOnClickListener(v -> finish());
+        loginTextViewButton.setOnClickListener(v -> finish());
     }
 
     void createUser() {
