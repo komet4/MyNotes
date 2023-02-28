@@ -6,6 +6,9 @@
     <color name="dark_gray_1">#646464</color>
     <color name="dark_gray_2">#5A5A5A</color>
     <color name="dark_gray_3">#505050</color>
+    <color name="light_yellow">#FBE070</color>
+    <color name="yellow">#FFD53A</color>
+    <color name="deep_yellow">#FFC602</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

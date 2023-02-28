@@ -1,10 +1,12 @@
 package com.topacademy.mynotes;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Patterns;
 import android.view.View;
 import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;

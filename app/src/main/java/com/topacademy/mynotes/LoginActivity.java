@@ -1,5 +1,7 @@
 package com.topacademy.mynotes;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.util.Patterns;
 import android.view.View;
@@ -7,8 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
@@ -48,8 +50,7 @@ public class LoginActivity extends AppCompatActivity {
     void loginAccountInFirebase(String email, String password) {
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         changeInProgress(true);
-        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(
-                task -> {
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                     changeInProgress(false);
                     if (task.isSuccessful()) {
                         //login is success
@@ -62,7 +63,8 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     } else {
                         //login failed
-                        Utility.showToast(LoginActivity.this, Objects.requireNonNull(task.getException()).getLocalizedMessage());
+                        Utility.showToast(LoginActivity.this, Objects.requireNonNull(task.getException())
+                                .getLocalizedMessage());
                     }
                 });
     }

@@ -1,13 +1,15 @@
 package com.topacademy.mynotes;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
@@ -48,7 +50,6 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
-
             titleTextView = itemView.findViewById(R.id.note_title_text_view);
             contentTextView = itemView.findViewById(R.id.notes_content_edit_text);
             timestampTextView = itemView.findViewById(R.id.note_timestamp_text_view);

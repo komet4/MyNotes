@@ -18,7 +18,10 @@
     <string name="success">Successfully</string>
     <string name="notes">Notes</string>
     <string name="note_title">Note title</string>
-    <string name="note_content">This can be note contentthat can be long</string>
+    <string name="note_content">This can be note content that can be long</string>
     <string name="note_timestamp">22/02/2023</string>
     <string name="delete">Delete note</string>
+    <string name="save">Save note</string>
+    <string name="menu">Menu</string>
+    <string name="icon">Icon</string>
 </resources>

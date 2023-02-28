@@ -1,6 +1,5 @@
 package com.topacademy.mynotes;
 
-
 import com.google.firebase.Timestamp;
 
 public class Note {

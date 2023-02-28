@@ -3,6 +3,7 @@ package com.topacademy.mynotes;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.widget.Toast;
+
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -16,9 +17,8 @@ public class Utility {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
-    static CollectionReference getCollectionsReferenceForNotes() {
+    static CollectionReference getCollectionReferenceForNotes() {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        assert currentUser != null;
         return FirebaseFirestore.getInstance().collection("notes").document(currentUser.getUid())
                 .collection("my_notes");
     }

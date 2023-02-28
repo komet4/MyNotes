@@ -1,21 +1,24 @@
 package com.topacademy.mynotes;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 
 public class NoteDetailsActivity extends AppCompatActivity {
     EditText titleEditText, contentEditText;
-    ImageButton saveButton, deleteButton;
+    ImageButton saveNoteButton, deleteNoteButton;
     TextView pageTitleTextView;
     String title, content, docId;
-    boolean isEditMode;
-    TextView deleteNoteTextViewButton;
+    //TextView deleteNoteTextViewButton;
+    boolean isEditMode = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +27,10 @@ public class NoteDetailsActivity extends AppCompatActivity {
 
         titleEditText = findViewById(R.id.notes_title_edit_text);
         contentEditText = findViewById(R.id.notes_content_edit_text);
-        saveButton = findViewById(R.id.save_note_button);
+        saveNoteButton = findViewById(R.id.save_note_button);
         pageTitleTextView = findViewById(R.id.page_title_text_view);
         //deleteNoteTextViewButton = findViewById(R.id.delete_note_text_view_button);
-        deleteButton = findViewById(R.id.delete_note_button);
+        deleteNoteButton = findViewById(R.id.delete_note_button);
 
         //receive data
         title = getIntent().getStringExtra("title");
@@ -43,12 +46,12 @@ public class NoteDetailsActivity extends AppCompatActivity {
         if (isEditMode) {
             pageTitleTextView.setText("Edit your note");
             //deleteNoteTextViewButton.setVisibility(View.VISIBLE);
-            deleteButton.setVisibility(View.VISIBLE);
+            deleteNoteButton.setVisibility(View.VISIBLE);
         }
 
-        saveButton.setOnClickListener(v -> saveNote());
+        saveNoteButton.setOnClickListener(v -> saveNote());
         //deleteNoteTextViewButton.setOnClickListener(v -> deleteNoteFromFirebase());
-        deleteButton.setOnClickListener(v -> deleteNoteFromFirebase());
+        deleteNoteButton.setOnClickListener(v -> deleteNoteFromFirebase());
     }
 
     void saveNote() {
@@ -70,10 +73,10 @@ public class NoteDetailsActivity extends AppCompatActivity {
         DocumentReference documentReference;
         if (!isEditMode) {
             //create new note
-            documentReference = Utility.getCollectionsReferenceForNotes().document();
+            documentReference = Utility.getCollectionReferenceForNotes().document();
         } else {
             //update the note
-            documentReference = Utility.getCollectionsReferenceForNotes().document(docId);
+            documentReference = Utility.getCollectionReferenceForNotes().document(docId);
         }
 
         documentReference.set(note).addOnCompleteListener(task -> {
@@ -89,7 +92,7 @@ public class NoteDetailsActivity extends AppCompatActivity {
 
     void deleteNoteFromFirebase() {
         DocumentReference documentReference;
-        documentReference = Utility.getCollectionsReferenceForNotes().document(docId);
+        documentReference = Utility.getCollectionReferenceForNotes().document(docId);
 
         documentReference.delete().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

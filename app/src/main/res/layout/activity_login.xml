@@ -2,7 +2,6 @@
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingVertical="32dp"
@@ -16,7 +15,8 @@
             android:layout_height="128dp"
             android:layout_centerHorizontal="true"
             android:layout_marginVertical="40dp"
-            android:src="@drawable/login"/>
+            android:src="@drawable/login"
+            android:contentDescription="@string/icon"/>
 
     <LinearLayout
             android:id="@+id/hello_layout"
@@ -60,7 +60,8 @@
                 android:textSize="20sp"
                 android:background="@drawable/rounded_corner"
                 android:padding="16dp"
-                android:layout_marginTop="12dp"/>
+                android:layout_marginTop="12dp"
+                android:autofillHints="no"/>
 
         <EditText
                 android:id="@+id/password_edit_text"
@@ -71,7 +72,8 @@
                 android:textSize="20sp"
                 android:background="@drawable/rounded_corner"
                 android:padding="16dp"
-                android:layout_marginTop="12dp"/>
+                android:layout_marginTop="12dp"
+                android:autofillHints="no"/>
 
         <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_button"
@@ -102,7 +104,8 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dont"/>
+                android:text="@string/dont"
+                android:textColor="@color/dark_gray_2"/>
 
         <TextView
                 android:id="@+id/create_account_text_view_button"
@@ -110,7 +113,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/create"
                 android:textStyle="bold"
-                android:layout_marginLeft="4dp"/>
+                android:layout_marginStart="4dp"
+                android:textColor="@color/dark_gray_1"/>
 
     </LinearLayout>
 
