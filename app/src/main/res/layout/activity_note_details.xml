@@ -60,7 +60,7 @@
             android:background="@drawable/rounded_corner">
 
         <EditText
-                android:id="@+id/notes_title_edit_text"
+                android:id="@+id/note_title_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/title"
@@ -73,7 +73,7 @@
                 android:autofillHints="no"/>
 
         <EditText
-                android:id="@+id/notes_content_edit_text"
+                android:id="@+id/note_content_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/content"

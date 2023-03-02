@@ -51,7 +51,7 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
             titleTextView = itemView.findViewById(R.id.note_title_text_view);
-            contentTextView = itemView.findViewById(R.id.notes_content_edit_text);
+            contentTextView = itemView.findViewById(R.id.note_content_text_view);
             timestampTextView = itemView.findViewById(R.id.note_timestamp_text_view);
         }
     }

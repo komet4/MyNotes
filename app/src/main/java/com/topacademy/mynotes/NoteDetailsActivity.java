@@ -25,8 +25,8 @@ public class NoteDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_details);
 
-        titleEditText = findViewById(R.id.notes_title_edit_text);
-        contentEditText = findViewById(R.id.notes_content_edit_text);
+        titleEditText = findViewById(R.id.note_title_edit_text);
+        contentEditText = findViewById(R.id.note_content_edit_text);
         saveNoteButton = findViewById(R.id.save_note_button);
         pageTitleTextView = findViewById(R.id.page_title_text_view);
         //deleteNoteTextViewButton = findViewById(R.id.delete_note_text_view_button);
