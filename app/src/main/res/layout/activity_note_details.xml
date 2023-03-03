@@ -25,17 +25,6 @@
                 android:textStyle="bold"/>
 
         <ImageButton
-                android:id="@+id/save_note_button"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_baseline_done_24"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/save"
-                app:tint="@color/black"/>
-
-        <ImageButton
                 android:id="@+id/delete_note_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -45,7 +34,18 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="gone"
                 android:contentDescription="@string/delete"
-                app:tint="@color/black"/>
+                app:tint="@color/red"/>
+
+        <ImageButton
+                android:id="@+id/save_note_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_done_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/save"
+                app:tint="@color/deep_yellow"/>
 
     </RelativeLayout>
 
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/title"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -77,12 +77,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/content"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:layout_marginVertical="8dp"
                 android:padding="12dp"
                 android:gravity="top"
+                android:background="@null"
                 android:autofillHints="no"/>
 
     </LinearLayout>

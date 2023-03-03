@@ -22,7 +22,7 @@
     <ProgressBar
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:indeterminateTint="@color/dark_gray_1"
+            android:indeterminateTint="@color/deep_yellow"
             android:layout_margin="20dp"/>
 
 </LinearLayout>
